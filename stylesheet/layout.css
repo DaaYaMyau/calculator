@@ -1,0 +1,143 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: linear-gradient(107deg, #fccbcb 2.39%, #FFFFFF 100.42%);
+    background-size: 200% 200%;
+    animation: bg 10s ease-out infinite;
+    color: #FFFFFF;
+    font-family: "Work Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 2.5vw;
+}
+
+@keyframes bg {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.note {
+    position: absolute;
+    left: 2vw;
+    top: 3.07vw;
+    width: 28.28vw;
+    height: 9.9vw;
+    background-color: #F8A1A1;
+    border-radius: 1.82vw;
+    padding: 1.3vw 1.56vw 1.56vw 1.56vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.close-btn {
+    width: 2vw;
+    height: 2vw;
+    background-image: url(../img/close-btn.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.text {
+    width: 23.44vw;
+    font-size: 1.25rem;
+}
+
+.text p:first-child {
+    margin-bottom: 1vw;
+}
+
+.cat-dance {
+    width: 6.18vw;
+    height: 6.74vw;
+    margin-top: 3vw;
+    margin-right: -1.5vw;
+    background-image: url(../img/cat-dance.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.right {
+    margin-left: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.calculator {
+    width: 26vw;
+    height: 40vw;
+    background-color: #F8A1A1;
+    border-radius: 2.08vw;
+    padding: 2vw 2vw 2.66vw 2vw;
+}
+
+.display {
+    font-size: 7.5rem;
+    width: 100%;
+    margin-bottom: 0.7vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    text-align: end;
+}
+
+button {
+    width: 5.8vw;
+    height: 5.8vw;
+    border-radius: 3.54vw;
+    background: #FF7979;
+    border: 0;
+    margin: 0.6vw 0.3vw 0vw 0.3vw;
+    color: #FFFFFF;
+    font-family: "Work Sans", sans-serif;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.buttons {
+    width: 27vw;
+    height: 36vw;
+    align-self: center;
+}
+
+.cat {
+    width: 21.41vw;
+    height: 10.73vw;
+    background-image: url(../img/cat-gif.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 1vw;
+    right: 7vw;
+}
+
+.stars {
+    width: 15vw;
+    height: 15vw;
+    background-image: url(../img/pixel-star.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 0vw;
+    top: 1vw;
+    display: none;
+}
+
+.empty {
+    visibility: hidden;
+}
