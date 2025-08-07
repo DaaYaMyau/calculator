@@ -29,11 +29,41 @@ document.addEventListener('DOMContentLoaded', () => {
                     break;
 
                 case "÷":
-                    display.innerText = display.innerText + "/";
+                    if (display.innerText.at(-1) == "/" || display.innerText.at(-1) == "*" || display.innerText.at(-1) == "+" || display.innerText.at(-1) == "-") { //these symbols can be as a array, but I will do it, if this idea will work
+                        display.innerText = display.innerText.replace(/.$/, "/")
+                    } else {
+                        display.innerText = display.innerText + "/";
+                    }
                     break;
 
                 case "X":
-                    display.innerText = display.innerText + "*";
+                    if (display.innerText.at(-1) == "/" || display.innerText.at(-1) == "*" || display.innerText.at(-1) == "+" || display.innerText.at(-1) == "-") {
+                        display.innerText = display.innerText.replace(/.$/, "*")
+                    } else {
+                        display.innerText = display.innerText + "*";
+                    }
+                    break;
+
+                case "+":
+                    if (display.innerText.at(-1) == "/" || display.innerText.at(-1) == "*" || display.innerText.at(-1) == "+" || display.innerText.at(-1) == "-" ) {
+                        display.innerText = display.innerText.replace(/.$/, "+")
+                    } else {
+                        display.innerText = display.innerText + "+";
+                    }
+                    break;
+
+                    //  else if (display.innerText == "-") {
+                    //     display.innerText = "0+"
+                    // } 
+
+                case "-":
+                    if (display.innerText.at(-1) == "/" || display.innerText.at(-1) == "*" || display.innerText.at(-1) == "+" || display.innerText.at(-1) == "-") {
+                        display.innerText = display.innerText.replace(/.$/, "-")
+                    } else if (display.innerText == "0") {
+                        display.innerText = "-"
+                    } else {
+                        display.innerText = display.innerText + "-";
+                    }
                     break;
 
                 case "=":
