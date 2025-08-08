@@ -29,32 +29,34 @@ document.addEventListener('DOMContentLoaded', () => {
                     break;
 
                 case "÷":
-                    if (display.innerText.at(-1) == "/" || display.innerText.at(-1) == "*" || display.innerText.at(-1) == "+" || display.innerText.at(-1) == "-") { //these symbols can be as a array, but I will do it, if this idea will work
+                    if (display.innerText.at(-1) == "/" || display.innerText.at(-1) == "*" || display.innerText.at(-1) == "+") { //these symbols can be as a array, but I will do it, if this idea will work
                         display.innerText = display.innerText.replace(/.$/, "/")
+                    } else if (display.innerText == "-") {
+                        display.innerText = "0/"
                     } else {
                         display.innerText = display.innerText + "/";
                     }
                     break;
 
                 case "X":
-                    if (display.innerText.at(-1) == "/" || display.innerText.at(-1) == "*" || display.innerText.at(-1) == "+" || display.innerText.at(-1) == "-") {
+                    if (display.innerText.at(-1) == "/" || display.innerText.at(-1) == "*" || display.innerText.at(-1) == "+") {
                         display.innerText = display.innerText.replace(/.$/, "*")
+                    } else if (display.innerText == "-") {
+                        display.innerText = "0*"
                     } else {
                         display.innerText = display.innerText + "*";
                     }
                     break;
 
                 case "+":
-                    if (display.innerText.at(-1) == "/" || display.innerText.at(-1) == "*" || display.innerText.at(-1) == "+" || display.innerText.at(-1) == "-" ) {
+                    if (display.innerText.at(-1) == "/" || display.innerText.at(-1) == "*" || display.innerText.at(-1) == "+" ) {
                         display.innerText = display.innerText.replace(/.$/, "+")
+                    } else if (display.innerText == "-") {
+                        display.innerText = "0+"
                     } else {
                         display.innerText = display.innerText + "+";
                     }
                     break;
-
-                    //  else if (display.innerText == "-") {
-                    //     display.innerText = "0+"
-                    // } 
 
                 case "-":
                     if (display.innerText.at(-1) == "/" || display.innerText.at(-1) == "*" || display.innerText.at(-1) == "+" || display.innerText.at(-1) == "-") {
